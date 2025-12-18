@@ -1,93 +1,73 @@
-🖼️ Image Editor
+# 🖼️ Image Editor
 
-A simple and powerful web-based image editor built with HTML, CSS, and JavaScript. This project allows you to upload, edit, and save images right in your browser with essential editing tools.
+A simple, fast, and modern **web-based Image Editor** built using **HTML, CSS, and Vanilla JavaScript**.  
+This project allows users to upload images, apply basic edits and filters, and download the edited image — all directly in the browser without any backend.
 
-💡 Features
+---
 
-✔ Upload & preview images
-✔ Apply common filters (brightness, contrast, grayscale, etc.)
-✔ Rotate & flip images
-✔ Crop and resize images
-✔ Download your finished edits
-✔ Responsive and intuitive UI
+## 🌐 Live Demo
 
-📌 Demo
+🔗 https://image-editor.vercel.app  
+*(Replace with your actual Vercel URL if different)*
 
-https://keshavsspppp.github.io/Image-Editor/
+---
 
-🚀 Getting Started
-🧰 Prerequisites
+## ✨ Features
 
-You only need a modern browser — no backend required.
+- 📤 Upload images from your device  
+- 🎨 Apply image filters (brightness, contrast, grayscale, etc.)  
+- 🔄 Rotate and flip images  
+- ✂️ Crop and resize images  
+- 💾 Download edited images  
+- 📱 Fully responsive UI  
+- ⚡ Lightweight & fast (no frameworks)
 
-📥 Clone the Repository
+---
+
+## 🛠️ Tech Stack
+
+- **HTML5** – Structure  
+- **CSS3** – Styling & layout  
+- **JavaScript (Vanilla)** – Image editing logic  
+- **HTML Canvas API** – Image processing  
+- **Vercel** – Deployment
+
+---
+
+## 📂 Project Structure
+
+Image-Editor/
+├── index.html # Main HTML file
+├── style.css # Core styling
+├── themes.css # Theme styles
+├── scripts.js # Image editing logic
+└── README.md # Project documentation
+
+
+---
+
+## 🚀 Getting Started (Run Locally)
+
+### 1️⃣ Clone the Repository
+
+```bash
 git clone https://github.com/Keshavsspppp/Image-Editor.git
-
-📂 Run Locally
-
-Navigate into the project directory
-
+```
+Open the Project
 cd Image-Editor
 
 
-Open the editor in your browser
+3️⃣ Run the App
 
-Double-click index.html, or
-
-Serve via live server / development server
+Just open index.html in your browser
+(or use Live Server in VS Code)
 
 🧠 How It Works
 
-This editor uses HTML canvas and vanilla JavaScript to:
+Images are loaded into an HTML canvas
 
-Display an uploaded image
+Filters and transformations are applied using JavaScript
 
-Apply visual filters
+Edited image is exported using canvas.toDataURL()
 
-Perform geometric transformations
-
-Export the modified image back to the user
-
-(Internals are implemented across index.html, scripts.js, style.css, and theme styling files.) 
-GitHub
-
-🏗️ Project Structure
-Image-Editor/
-├── index.html       ← Main UI layout
-├── style.css        ← Core styling
-├── themes.css       ← Light/Dark theme styles
-├── scripts.js       ← Editing logic & filter functions
-├── README.md        ← This file
-
-✨ Usage
-
-Click Upload Image to select a photo from your device
-
-Use sliders or buttons to:
-
-Apply filters
-
-Rotate or flip
-
-Crop & adjust
-
-When done, click Save Image to download your edited file
-
-📦 Tech Stack
-Technology	Purpose
-HTML5	Structure
-CSS3	Styling & Responsive UI
-JavaScript	Logic & Image Processing
-🖌️ Customization & Contributions
-
-Feel free to:
-
-Add new filters (sepia, vignette, hue rotate)
-
-Improve UI/UX design
-
-Add keyboard shortcuts
-
-Support touch gestures
-
-Contributions are welcome — fork the repo and open a pull request!
+No server or database required
