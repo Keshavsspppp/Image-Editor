@@ -7,8 +7,8 @@ This project allows users to upload images, apply basic edits and filters, and d
 
 ## 🌐 Live Demo
 
-🔗 https://image-editor.vercel.app  
-*(Replace with your actual Vercel URL if different)*
+https://image-editor-puce-phi.vercel.app/
+https://keshavsspppp.github.io/Image-Editor/
 
 ---
 
