@@ -16,6 +16,65 @@ html{
     color: var(--text-primary-color);
 }
 
+header.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gutter-lg);
+    padding: var(--padding-lg) var(--padding-2xl);
+    background-color: var(--bg-secondary-color);
+    border-bottom: 1px solid var(--bg-active-color);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+header.navbar .nav-brand{
+    display: flex;
+    align-items: center;
+    gap: var(--gutter-sm);
+    font-weight: 700;
+}
+
+header.navbar .nav-brand i{
+    font-size: 1.4rem;
+}
+
+header.navbar .nav-links{
+    display: flex;
+    align-items: center;
+    gap: var(--gutter-lg);
+}
+
+header.navbar .nav-links a{
+    text-decoration: none;
+    color: var(--text-primary-color);
+    font-weight: 600;
+    transition: color 120ms ease;
+}
+
+header.navbar .nav-links a:hover{
+    color: var(--bg-active-color);
+}
+
+header.navbar .nav-actions{
+    display: flex;
+    align-items: center;
+}
+
+.nav-actions .btn{
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-ghost{
+    background-color: transparent;
+    color: var(--text-primary-color);
+    border: 1px solid var(--bg-active-color);
+}
+
 main{
     width: 100%;
 }
@@ -43,6 +102,8 @@ main section .bottom{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 
 main section .bottom .placeholder{
@@ -53,6 +114,10 @@ main section .bottom .placeholder{
     gap: var(--gutter-md);
 }
 
+main section .bottom .placeholder.hidden{
+    display: none;
+}
+
 
 main section .bottom .placeholder i{
     font-size: 10rem;
@@ -60,6 +125,18 @@ main section .bottom .placeholder i{
 
 main section .bottom .placeholder p{
     font-size: var(--font-size-lg);
+}
+
+.preview{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.hidden{
+    display: none !important;
 }
 
 .btn{
@@ -88,18 +165,43 @@ main section .right{
     display: flex;
     flex-direction: column;
     gap: var(--gutter-md);
-}
-
-
-main section .right .filter{
-    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    border: 1px solid rgba(255,255,255,0.06);
 }
 
 
 main section .right .filters{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--gutter-md);
+    padding-right: 0;
+}
+
+main section .right .filters h2{
+    margin-bottom: var(--margin-sm);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: var(--font-size-sm);
+    opacity: 0.8;
+}
+
+main section .right .filter{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: var(--gutter-lg);
+    gap: var(--gutter-xs);
+    padding: var(--padding-md);
+    border-radius: var(--border-radius-md);
+    background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+    border: 1px solid rgba(255,255,255,0.06);
+    min-width: 0;
+}
+
+main section .right .filter p{
+    margin: 0;
+    font-weight: 600;
+    color: var(--text-primary-color);
 }
 
 main section .right .filter input{
@@ -107,6 +209,10 @@ main section .right .filter input{
     outline: none;
     margin-top: var(--margin-sm);
     appearance: none;
+    background: linear-gradient(90deg, var(--bg-active-color), var(--bg-active-color));
+    height: 6px;
+    border-radius: 3px;
+    transition: box-shadow 120ms ease;
 }
 
 main section .right .filter input::-webkit-slider-runnable-track{
@@ -127,8 +233,15 @@ main section .right .filter input::-webkit-slider-thumb{
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    background-color: red;
+    background-color: var(--bg-active-color);
+    border: 2px solid rgba(255,255,255,0.6);
     margin: -8.5px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.16);
+}
+
+main section .right .filter input:focus-visible{
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.12);
 }
 
 

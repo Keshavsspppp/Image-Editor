@@ -13,7 +13,19 @@
 
 </head>
 <body>
-    <main>
+    <header class="navbar">
+        <div class="nav-brand">
+            <i class="ri-sparkling-2-line"></i>
+            <span>Image Editor</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#workspace">Workspace</a>
+        </nav>
+        <div class="nav-actions">
+            <button class="btn nav-ghost" id="nav-upload-btn" type="button">New Upload</button>
+        </div>
+    </header>
+    <main id="workspace">
         <section>
             <div class="left">
                 <div class="top">
@@ -29,21 +41,12 @@
                         <i class="ri-image-2-line"></i>
                         <p>No image chosen</p>
                     </div>
+                    <img id="preview-img" class="preview hidden" alt="Preview" />
                 </div>
             </div>
             <div class="right">
-                <div class="filters">
+                <div class="filters" id="filters">
                 <h2>Filters</h2>
-                <div class="filter">
-                    <p>brightness</p>
-                    <input 
-                        name="brightness" 
-                        value="100"   
-                        type="range" 
-                        min="0" 
-                        max="200"
-                    >
-                </div>
                 </div>
             </div>
         </section>
